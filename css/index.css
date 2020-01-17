@@ -1,0 +1,213 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.animation{
+    height: 100vh;
+    width: 100%;
+    /* position: absolute; */
+    overflow: hidden;
+}
+
+.ground{
+    background: url("../img/mountains/ground.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position-x: center;
+    height: 7rem;
+    width: 1000rem;
+    animation: slide 65s linear infinite;
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50% , -0%);
+    z-index: 10;
+}
+
+.b-mountains{
+    background: url("../img/mountains/base\ mountains.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position-x: center;
+    height: 17rem;
+    width: 1000rem;
+    animation: slide 60s linear infinite;
+    position: absolute;
+    bottom: 4.5rem;
+    transform: translate(-50% , -0%);
+    z-index: 9;
+}
+
+.m-mountains{
+    background: url("../img/mountains/mid\ mountains.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position-x: center;
+    height: 17rem;
+    width: 1000rem;
+    animation: slide 55s linear infinite;
+    position: absolute;
+    bottom: 4.5rem;
+    transform: translate(-50% , -0%);
+    z-index: 8;
+}
+
+.t-mountains{
+    background: url("../img/mountains/top\ mountains.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position-x: center;
+    height: 16rem;
+    width: 1000rem;
+    animation: slide 45s linear infinite;
+    position: absolute;
+    bottom: 5rem;
+    transform: translate(-50% , -0%);
+    z-index: 7;
+}
+
+.clouds-sp{   
+    background: url("../img/clouds/speed\ clouds.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position-x: center;
+    height: 17rem;
+    width: 1000rem;
+    animation: slide 40s linear infinite;
+    position: absolute;
+    bottom: 53%;
+    transform: translate(-50% , -0%);
+    z-index: 6;
+}
+
+.couds-sl{   
+    background: url("../img/clouds/slow\ clouds.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position-x: center;
+    height: 17rem;
+    width: 1000rem;
+    animation: slide 45s linear infinite;
+    position: absolute;
+    bottom: 50%;
+    transform: translate(-50% , -0%);
+    z-index: 5;
+}
+
+.background{
+    background: url("../img/clouds/sky.png");
+    background-size: cover;
+    height: 80vh ;
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+}
+
+.navbar{
+    top: 2%;
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    width: 36rem;
+    height: 2rem;
+    background-color: white;
+}
+
+.buttom{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Arial;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* @keyframes slide {
+    0%{
+        left: -200%;
+    }
+    100%{
+        left: 200%;
+    }
+    INVERSO
+} */
+
+@keyframes slide {
+    0%{
+        left: 200%;
+    }
+    100%{
+        left: -200%;
+    }
+}
+
+.cat{
+    position: absolute;
+    background-size: cover;
+    background-image: url(../img/cat/walk/1.png);
+    height: 7rem;
+    width: 7rem;
+    /* background-color: aqua; */
+    animation-name: cat-walk;
+    animation-duration: 0.8s;
+    /* animation-duration: 2.5s;  stand */
+    animation-iteration-count:infinite;
+    transition: 0;
+    bottom: 1rem;
+    left: 50%;
+    z-index: 11;
+    transform: translatex(-50%);
+    /* transform: scaleX(-1); */
+}
+
+/* @keyframes cat-stand {
+    5%{background-image: url(../img/cat/stand/2.png);} 
+    10% {background-image: url(../img/cat/stand/3.png);}
+    15% {background-image: url(../img/cat/stand/4.png);}
+    20%{background-image: url(../img/cat/stand/5.png);}
+    25% {background-image: url(../img/cat/stand/6.png);} 
+    30% {background-image: url(../img/cat/stand/8.png);}
+    35% {background-image: url(../img/cat/stand/9.png);}
+    40% {background-image: url(../img/cat/stand/10.png);}
+    45% {background-image: url(../img/cat/stand/8.png);}
+    50% {background-image: url(../img/cat/stand/9.png);}
+    55% {background-image: url(../img/cat/stand/10.png);}
+    60% {background-image: url(../img/cat/stand/8.png);}
+    65% {background-image: url(../img/cat/stand/9.png);}
+    70% {background-image: url(../img/cat/stand/10.png);}
+    75% {background-image: url(../img/cat/stand/8.png);}
+    80% {background-image: url(../img/cat/stand/9.png);}
+    85% {background-image: url(../img/cat/stand/10.png);}
+    90% {background-image: url(../img/cat/stand/8.png);}
+    95% {background-image: url(../img/cat/stand/9.png);}
+    100% {background-image: url(../img/cat/stand/10.png);}
+} */
+
+@keyframes cat-walk {
+    0%{
+        background-image: url(../img/cat/walk/1.png);
+    }
+    25% {
+        background-image: url(../img/cat/walk/2.png);
+    }  
+    50% {
+        background-image: url(../img/cat/walk/3.png);
+    }
+    75% { 
+        background-image: url(../img/cat/walk/4.png);
+    }
+}
